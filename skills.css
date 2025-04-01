@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    color: #fff;
+    background: black;
+}
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+    padding-top: 30px;
+}
+.sub-title span {
+    color: chartreuse;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+.heading {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar {
+    font-size: 23px;
+}
+.Technical-bars .bar {
+    margin: 40px 0;
+}
+.Technical-bars .bar:first-child {
+    margin-top: 0;
+}
+.Technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+.Technical-bars .bar.info {
+    margin-bottom: 5px;
+}
+.Technical-bars .bar.info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+.Technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: rgba(22, 179, 152, 0.904);
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+} 
+.progress-line.html span {
+    width: 90%;
+}
+.progress-line.css span {
+    width: 76%;
+}
+.progress-line.javascript span {
+    width: 85%;
+}
+.progress-line.python span {
+    width: 50%;
+}
+.progress-line.java span {
+    width: 75%;
+}
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: rgba(22, 179, 152, 0.904);
+    color: white;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line.html span::after {
+    content: "90%";
+}
+.progress-line.css span::after {
+    content: "60%";
+}
+.progress-line.javascript span::after {
+    content: "85%";
+}
+.progress-line.python span::after {
+    content: "50%";
+}
+.progress-line.java span::after {
+    content: "75%";
+}
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: white;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+.heading1 spa{color:red;}
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stroke: white ;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+.path {
+    stroke-width: 10;
+    stroke:rgba(22, 179, 152, 0.904);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+.path-2 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+.path-3 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+.path-4 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 125;
+    }
+}
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.progress-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+} 
+button {
+    --glow-color: rgba(22, 179, 152, 0.904);
+    --glow-spread-color: rgba(22, 179, 106, 0.904);
+    --enhanced-glow-color:rgba(22, 179, 152, 0.904) ;
+    --btn-color: black;
+
+    border: 0.25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+    text-shadow: 0 0 0.5em var(--glow-color);
+    position: relative;
+    transition: all 0.2s;
+}
+
+button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: 0.7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 2em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+button:active {
+    box-shadow: 0 0 0.6em 0.25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color), inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+  button {
+    position: absolute;
+    bottom: 0; /* Align the button to the bottom */
+    left: 0; /* Align the button to the left */
+  }
+  button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  

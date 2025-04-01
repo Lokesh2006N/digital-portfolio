@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: rgba(22, 179, 152, 0.904);
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: rgba(22, 179, 152, 0.904);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color:  rgba(22, 179, 152, 0.904);
+    border-bottom: 2px solid green;
+}
+
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid red;
+        border-bottom: 3px solid red;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.3rem;
+        border-bottom: 0.5rem solid  rgba(22, 179, 152, 0.904);
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: white;
+}
+
+span {
+    color:  rgba(22, 179, 152, 0.904);
+}
+
+.home-content h3 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.home-content p {
+    font-style: italic;
+    font-size: 1.6rem;
+    color:  rgba(22, 179, 152, 0.904);
+}
+
+
+
+
+.home-img {
+    border-radius: 50%;
+    width: 68vw;
+    
+    background-color: var(--glow-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.home-img img {
+    border-radius: 20%;
+    width: 18vw;
+    cursor: pointer;
+    transition: 0.2s linear;
+
+}
+
+.home-img img:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+  
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid  rgba(22, 179, 152, 0.904);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color:  rgba(22, 179, 152, 0.904);
+}
+
+social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: red;
+    box-shadow: 0 0 25px red;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color:  rgba(22, 179, 152, 0.904);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid  rgba(22, 179, 152, 0.904);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    background-color: rgba(22, 179, 152, 0.904);
+    color: black;
+    box-shadow: 0 0 25px #0ead98;
+}
+
+.typing-text {
+    font-size: 24px;
+    font-weight: 400;
+    min-width: 280px;
+    color: aqua;
+}
+
+.typing-text span {
+    position: relative;
+    color: ;
+}
+
+.typing-text span::before {
+    content: "software Developer";
+    color:  rgba(22, 179, 152, 0.904);
+    animation: words 05s infinite;
+}
+
+
+@keyframes slider {
+    to {
+        border-left: 3px solid #4acfee;
+    }
+}
+
+@keyframes words {
+    0%, 60% {
+        content: "Developer";
+    }
+    61%, 80% {
+        content: "student";
+    }
+    81%, 100% {
+        content: "Web Designer";
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 5rem;
+    }
+}
+
+button {
+    --glow-color: rgba(22, 179, 152, 0.904);
+    --glow-spread-color: rgba(22, 179, 106, 0.904);
+    --enhanced-glow-color:rgba(22, 179, 152, 0.904) ;
+    --btn-color: black;
+
+
+    border: 0.25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+    text-shadow: 0 0 0.5em var(--glow-color);
+    position: relative;
+    transition: all 0.2s;
+}
+
+button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: 0.7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 2em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+button:active {
+    box-shadow: 0 0 0.6em 0.25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color), inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+button {
+    position: absolute;
+    bottom: 0; /* Align the button to the bottom */
+    left: 0; /* Align the button to the left */
+  }
+  button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  

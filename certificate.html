@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: #fffdef;
+        }
+        h1 {
+            color: rgba(22, 179, 152, 0.904);
+        }
+        .certificate-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .certificate {
+            width: 300px;
+            height: 400px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(22, 179, 152, 0.904);
+            background-color: black; /* Changed to black */
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-size: 18px;
+            color: rgba(22, 179, 152, 0.904);
+            position: relative;
+        }
+        .certificate img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        button {
+            --glow-color: rgba(22, 179, 152, 0.904);
+            --glow-spread-color: rgba(22, 179, 106, 0.904);
+            --enhanced-glow-color: rgba(22, 179, 152, 0.904);
+            --btn-color: black;
+
+            border: 0.25em solid var(--glow-color);
+            padding: 1em 3em;
+            color: var(--glow-color);
+            font-size: 15px;
+            font-weight: bold;
+            background-color: var(--btn-color);
+            border-radius: 1em;
+            outline: none;
+            box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+            text-shadow: 0 0 0.5em var(--glow-color);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        button::after {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            width: 100%;
+            background-color: var(--glow-spread-color);
+            filter: blur(2em);
+            opacity: 0.7;
+            transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+        }
+
+        button:hover {
+            color: rgba(22, 179, 152, 0.904);
+            background-color: var(--glow-color);
+            box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 2em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+        }
+
+        button:active {
+            box-shadow: 0 0 0.6em 0.25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color), inset 0 0 0.5em 0.25em var(--glow-color);
+        }
+
+        button {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Certificates</h1>
+    <div class="certificate-container">
+        <div class="certificate"><img src="f1.png" alt="Certificate 1"></div>
+        <div class="certificate"><img src="f2.png" alt="Certificate 2"></div>
+        <div class="certificate"><img src="f3.png" alt="Certificate 3"></div>
+        <div class="certificate"><img src="f4.png" alt="Certificate 4"></div>
+        <div class="certificate"><img src="f5.png" alt="Certificate 5"></div>
+        <div class="certificate"><img src="f6.png" alt="Certificate 6"></div>
+    </div>
+    <div><a href="Project.html">
+    <button>project</button></div>    
+</body>
+</html>
